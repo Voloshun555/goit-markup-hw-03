@@ -18,7 +18,6 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--primary-text-color);
   background-color: #ffffff;
-  font-family: roboto, sans-serif;
   margin: 0;
 }
 
@@ -28,12 +27,18 @@ body {
   list-style: none;
 }
 /* header */
-/* Logo */
 
+/* Logo */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
 .container {
   margin-left: auto;
   margin-right: auto;
   width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .logo {
@@ -52,12 +57,26 @@ body {
   color: var(--title-text-color);
 }
 /* nav */
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.3;
   letter-spacing: 0.02em;
+
   color: var(--title-text-color);
+
   text-decoration: none;
 }
 .nav-link:hover,
@@ -67,7 +86,15 @@ body {
 .nav-link:active {
   color: #4d5ae5;
 }
+/* auth-nav */
 
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+.auth-nav:not(:last-child) {
+  margin-right: 50px;
+}
 .nav-mail,
 .nav-tel {
   font-weight: 400;
@@ -89,7 +116,7 @@ body {
 
 /* hero */
 
-.hero {
+.section-hero {
   background: #2e2f42;
   text-align: center;
   margin-bottom: 120px;
@@ -142,8 +169,16 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.features-list,
+.styles-section {
+  display: flex;
+}
+.element-styl:not(:last-child) {
+  margin-right: 30px;
+}
 
-.section-features {
+.section-features,
+.section-work {
   margin-bottom: 120px;
 }
 /* What are we doing */
@@ -178,6 +213,10 @@ body {
 
 /* team */
 
+.section-team {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .card {
   background-color: #ffffff;
 }
@@ -210,17 +249,30 @@ body {
   letter-spacing: 0.02em;
 }
 /* bottom */
+.btm-porfolio {
+  margin-top: 96px;
+  margin-bottom: 72px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.btm-li {
+  margin-right: 24px;
+}
 .styles-botton {
   border-radius: 4px;
   padding: 8px 16px;
   border: 1px solid #e7e9fc;
+
   font-style: normal;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
+
   line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 8px 16px;
+
   background-color: #f4f4fd;
   color: #4d5ae5;
   cursor: pointer;
@@ -229,6 +281,22 @@ body {
 .styles-botton:focus {
   background-color: var(--accent-color);
   color: #ffffff;
+}
+
+.card-nav {
+  margin-right: 24px;
+}
+.flex-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+.projects:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+.card-nav:nth-child(3n) {
+  margin-right: 0px;
 }
 
 .projects-title {
