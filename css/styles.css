@@ -12,6 +12,8 @@ html {
   --primary-text-color: #434455;
   --title-text-color: #2e2f42;
   --accent-color: #4d5ae5;
+  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 body {
@@ -19,6 +21,22 @@ body {
   color: var(--primary-text-color);
   background-color: #ffffff;
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -33,6 +51,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -41,8 +60,14 @@ body {
   padding-right: 15px;
 }
 
+.logotype{
+  margin-right: 93px;
+}
 .logo {
   display: flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   letter-spacing: 0.03em;
   text-transform: uppercase;
   font-family: "Raleway";
@@ -60,16 +85,13 @@ body {
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
 }
 .nav-item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 40px;
 }
 
 .nav-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.3;
@@ -91,18 +113,25 @@ body {
 .auth-nav {
   display: flex;
   margin-left: auto;
+  
 }
 .auth-nav:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 40px;
 }
+
 .nav-mail,
 .nav-tel {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
   text-decoration: none;
+  color: var(--primary-text-color);
+  
 }
 
 .nav-mail:hover,
@@ -117,13 +146,13 @@ body {
 /* hero */
 
 .section-hero {
+  padding: 192px 474px;
   background: #2e2f42;
   text-align: center;
-  margin-bottom: 120px;
 }
 .hero-title {
   margin-top: 0;
-  margin-bottom: 48;
+  margin-bottom: 48px;
   font-weight: 500;
   font-size: 56px;
   line-height: 1.07;
@@ -175,11 +204,16 @@ body {
 }
 .element-styl:not(:last-child) {
   margin-right: 30px;
+  flex-basis: auto;
 }
 
-.section-features,
-.section-work {
-  margin-bottom: 120px;
+
+.section-features{
+  padding: 120px;
+}
+/* WORK */
+.section-work{
+  padding-bottom: 120PX;
 }
 /* What are we doing */
 .sections-title {
@@ -195,7 +229,7 @@ body {
 }
 .section-title {
   margin-top: 0;
-  margin-bottom: 8;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -212,7 +246,12 @@ body {
 }
 
 /* team */
-
+.card-team{
+  box-shadow: var(--card-shadow);
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 16px;
+}
 .section-team {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -223,7 +262,11 @@ body {
 .section-team {
   background-color: #f4f4fd;
 }
-.sections-name {
+.sections-name, 
+.sections-profession {
+margin-bottom: 8px;
+text-align: center;
+  
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -250,8 +293,8 @@ body {
 }
 /* bottom */
 .btm-porfolio {
-  margin-top: 96px;
-  margin-bottom: 72px;
+  padding-top: 96px;
+  padding-bottom: 72px;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -283,14 +326,13 @@ body {
   color: #ffffff;
 }
 
-.card-nav {
-  margin-right: 24px;
-}
 .flex-conteiner {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 120px;
+  padding-bottom: 120px;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 .projects:nth-last-child(-n + 3) {
   margin-bottom: 0px;
@@ -299,15 +341,24 @@ body {
   margin-right: 0px;
 }
 
+.card-projects {
+padding-top: 32px;
+padding-bottom: 32px;
+
+border: 0.5px solid #f4f4fd;
+}
+
 .projects-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
-
-.footer {
+/* footer */
+.footer{
+  padding: 100px;
   background-color: #2e2f42;
 }
 .footer .studio {
@@ -319,11 +370,4 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #e7e9fc;
-}
-
-.lead {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
 }
