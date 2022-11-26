@@ -343,7 +343,17 @@ text-align: center;
 .card-nav:nth-child(3n) {
   margin-right: 0px;
 }
+.card-link {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
 
+  color: var(--title-text-color);
+
+  text-decoration: none;
+}
 .card-projects {
 padding-top: 32px;
 padding-bottom: 32px;
